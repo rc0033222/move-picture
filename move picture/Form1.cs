@@ -19,7 +19,7 @@ namespace move_picture
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            pictureBox1.Location = new Point(pictureBox1.Location.X, pictureBox1.Location.Y - 5);
         }
     }
 }
