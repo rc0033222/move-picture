@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace move_picture
 {
-    public partial class Form1 : Form
+    public partial class Trump : Form
     {
-        public Form1()
+        public Trump()
         {
             InitializeComponent();
         }
@@ -57,5 +57,14 @@ namespace move_picture
             pictureBox1.Location = new Point(pictureBox1.Location.X + 15, pictureBox1.Location.Y + 15);
         }
         // moves the image to the bottom right
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Trump_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
