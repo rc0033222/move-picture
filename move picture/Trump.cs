@@ -40,7 +40,7 @@ namespace move_picture
                 pictureBox1.Location = new Point(pictureBox1.Location.X + 15, pictureBox1.Location.Y);
             }
         }
-        // moves the image left
+        // moves the image right
         private void button3_Click(object sender, EventArgs e)
         {
             if (pictureBox1.Location.X > 0)
@@ -48,7 +48,7 @@ namespace move_picture
                 pictureBox1.Location = new Point(pictureBox1.Location.X - 15, pictureBox1.Location.Y);
             }
         }
-        // moves the image right
+        // moves the image left
         private void button5_Click(object sender, EventArgs e)
         {
             if (pictureBox1.Location.Y > 0)
