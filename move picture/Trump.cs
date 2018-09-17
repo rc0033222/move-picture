@@ -19,22 +19,34 @@ namespace move_picture
 
         private void button1_Click(object sender, EventArgs e)
         {
-            pictureBox1.Location = new Point(pictureBox1.Location.X, pictureBox1.Location.Y - 15);
+            if (pictureBox1.Location.Y > 0)
+            {
+                pictureBox1.Location = new Point(pictureBox1.Location.X, pictureBox1.Location.Y - 15);
+            }
         }
         // moves the image up
         private void button2_Click(object sender, EventArgs e)
         {
-            pictureBox1.Location = new Point(pictureBox1.Location.X, pictureBox1.Location.Y + 15);
+            if (pictureBox1.Location.Y + 15 < ClientRectangle.Height - pictureBox1.Height)
+            {
+                pictureBox1.Location = new Point(pictureBox1.Location.X, pictureBox1.Location.Y + 15);
+            }
         }
         // moves the image dowm
         private void button4_Click(object sender, EventArgs e)
         {
-            pictureBox1.Location = new Point(pictureBox1.Location.X + 15, pictureBox1.Location.Y);
+            if (pictureBox1.Location.X + 15 < ClientRectangle.Width - pictureBox1.Width)
+            {
+                pictureBox1.Location = new Point(pictureBox1.Location.X + 15, pictureBox1.Location.Y);
+            }
         }
         // moves the image left
         private void button3_Click(object sender, EventArgs e)
         {
-            pictureBox1.Location = new Point(pictureBox1.Location.X - 15, pictureBox1.Location.Y);
+            if (pictureBox1.Location.X > 0)
+            {
+                pictureBox1.Location = new Point(pictureBox1.Location.X - 15, pictureBox1.Location.Y);
+            }
         }
         // moves the image right
         private void button5_Click(object sender, EventArgs e)
@@ -64,7 +76,7 @@ namespace move_picture
 
         private void Trump_Load(object sender, EventArgs e)
         {
-
+           
         }
     }
 }
