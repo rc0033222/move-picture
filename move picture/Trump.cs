@@ -51,22 +51,61 @@ namespace move_picture
         // moves the image right
         private void button5_Click(object sender, EventArgs e)
         {
-            pictureBox1.Location = new Point(pictureBox1.Location.X - 15, pictureBox1.Location.Y - 15);
+            if (pictureBox1.Location.Y > 0)
+            {
+                pictureBox1.Location = new Point(pictureBox1.Location.X, pictureBox1.Location.Y - 15);
+            }
+            if (pictureBox1.Location.X > 0)
+            {
+                pictureBox1.Location = new Point(pictureBox1.Location.X - 15, pictureBox1.Location.Y);
+            }
+
+            //pictureBox1.Location = new Point(pictureBox1.Location.X - 15, pictureBox1.Location.Y - 15);
         }
         // moves the image to the top left
         private void button6_Click(object sender, EventArgs e)
         {
-            pictureBox1.Location = new Point(pictureBox1.Location.X + 15, pictureBox1.Location.Y - 15);
+            if (pictureBox1.Location.Y > 0)
+            {
+                pictureBox1.Location = new Point(pictureBox1.Location.X, pictureBox1.Location.Y - 15);
+            }
+            if (pictureBox1.Location.X + 15 < ClientRectangle.Width - pictureBox1.Width)
+            {
+                pictureBox1.Location = new Point(pictureBox1.Location.X + 15, pictureBox1.Location.Y);
+            }
+
+
+            //pictureBox1.Location = new Point(pictureBox1.Location.X + 15, pictureBox1.Location.Y - 15);
         }
         // moves the image to the top right
         private void button7_Click(object sender, EventArgs e)
         {
-            pictureBox1.Location = new Point(pictureBox1.Location.X - 15, pictureBox1.Location.Y + 15);
+            if (pictureBox1.Location.Y + 15 < ClientRectangle.Height - pictureBox1.Height)
+            {
+                pictureBox1.Location = new Point(pictureBox1.Location.X, pictureBox1.Location.Y + 15);
+            }
+            if (pictureBox1.Location.X > 0)
+            {
+                pictureBox1.Location = new Point(pictureBox1.Location.X - 15, pictureBox1.Location.Y);
+            }
+
+
+            //pictureBox1.Location = new Point(pictureBox1.Location.X - 15, pictureBox1.Location.Y + 15);
         }
         // moves the image to the bottom left
         private void button8_Click(object sender, EventArgs e)
         {
-            pictureBox1.Location = new Point(pictureBox1.Location.X + 15, pictureBox1.Location.Y + 15);
+            if (pictureBox1.Location.X + 15 < ClientRectangle.Width - pictureBox1.Width)
+            {
+                pictureBox1.Location = new Point(pictureBox1.Location.X + 15, pictureBox1.Location.Y);
+            }
+            if (pictureBox1.Location.Y + 15 < ClientRectangle.Height - pictureBox1.Height)
+            {
+                pictureBox1.Location = new Point(pictureBox1.Location.X, pictureBox1.Location.Y + 15);
+            }
+
+
+            //pictureBox1.Location = new Point(pictureBox1.Location.X + 15, pictureBox1.Location.Y + 15);
         }
         // moves the image to the bottom right
         private void pictureBox1_Click(object sender, EventArgs e)
